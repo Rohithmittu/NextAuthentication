@@ -40,6 +40,8 @@ export const sendEmail = async ({ email, emailType, userId }: any) => {
       process.env.DOMAIN
     }/verifyemail?token=${hashedToken}</p>`;
 
+
+
     const forgotPasswordTokenMesssage = `<p>Click <a href="${
       process.env.DOMAIN
     }/verifyemail?token=${hashedToken}">here</a> to ${
