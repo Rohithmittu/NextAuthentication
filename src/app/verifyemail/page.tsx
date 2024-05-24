@@ -5,6 +5,9 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 function VerifyEmailPage() {
+
+
+  
   // const router = useRouter();
 
   const [token, setToken] = useState("");
@@ -13,7 +16,7 @@ function VerifyEmailPage() {
 
   const verifyUserEmail = async () => {
     try {
-      axios.post("/api/users/verifyemail", {token}); // there may be an error
+      axios.post("/api/users/verifyemail", { token }); // there may be an error
       setVerified(true);
     } catch (error: any) {
       setError(true);
