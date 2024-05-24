@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -9,7 +9,6 @@ function Login() {
   const router = useRouter();
 
   const [user, setUser] = useState({
-
     email: "",
     password: "",
   });
@@ -32,11 +31,7 @@ function Login() {
   };
 
   useEffect(() => {
-    if (
-      user.email.length > 0 &&
-      user.password.length > 0
-
-    ) {
+    if (user.email.length > 0 && user.password.length > 0) {
       setButtonDisabled(false);
     } else {
       setButtonDisabled(true);
@@ -47,8 +42,6 @@ function Login() {
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <h1>{loading ? "Processing" : "Login"}</h1>
       <hr />
-
-    
 
       <label htmlFor="email">email</label>
       <input
